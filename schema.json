@@ -1,0 +1,25 @@
+{
+    "typeName": "DavidMichael::S3::LogBucket::MODULE",
+    "description": "Schema for Module Fragment of type DavidMichael::S3::LogBucket::MODULE",
+    "properties": {
+        "Resources": {
+            "properties": {
+                "S3Bucket": {
+                    "type": "object",
+                    "properties": {
+                        "Type": {
+                            "type": "string",
+                            "const": "AWS::S3::Bucket"
+                        },
+                        "Properties": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": true
+}

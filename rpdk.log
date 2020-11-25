@@ -1,0 +1,159 @@
+[2020-11-25T16:00:21Z] DEBUG    - Logging set up successfully
+[2020-11-25T16:00:21Z] DEBUG    - Running None: Namespace(artifact_type=None, command=<function init at 0x7fe57ad06268>, force=False, subparser_name=None, type_name=None, verbose=0, version=False)
+[2020-11-25T16:00:21Z] DEBUG    - Root directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module
+[2020-11-25T16:00:21Z] WARNING  - Initializing new project
+[2020-11-25T16:00:21Z] DEBUG    - Loading project file '/home/david-mic/Code/github/1davidmichael/example_cfn_module/.rpdk-config'
+[2020-11-25T16:01:03Z] DEBUG    - Resource type identifier: DavidMichael::S3::Bucket::MODULE
+[2020-11-25T16:01:03Z] DEBUG    - Overwriting '/home/david-mic/Code/github/1davidmichael/example_cfn_module/.rpdk-config'
+[2020-11-25T16:01:03Z] DEBUG    - Fragment directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module/fragments
+[2020-11-25T16:01:03Z] DEBUG    - Overwriting '/home/david-mic/Code/github/1davidmichael/example_cfn_module/fragments/sample.json'
+[2020-11-25T16:01:03Z] WARNING  - Initialized a new project in /home/david-mic/Code/github/1davidmichael/example_cfn_module
+[2020-11-25T16:01:03Z] DEBUG    - Finished None
+[2020-11-25T16:13:49Z] DEBUG    - Logging set up successfully
+[2020-11-25T16:13:49Z] DEBUG    - Running submit: Namespace(command=<function submit at 0x7f11f23b5bf8>, dry_run=False, endpoint_url=None, region=None, role_arn=None, set_default=False, subparser_name='submit', use_role=True, verbose=0, version=False)
+[2020-11-25T16:13:49Z] DEBUG    - Root directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module
+[2020-11-25T16:13:49Z] DEBUG    - Loading project file '/home/david-mic/Code/github/1davidmichael/example_cfn_module/.rpdk-config'
+[2020-11-25T16:13:49Z] INFO     - Validating your module fragments...
+[2020-11-25T16:13:49Z] DEBUG    - Fragment directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module/fragments
+[2020-11-25T16:13:49Z] DEBUG    - Overwriting '/home/david-mic/Code/github/1davidmichael/example_cfn_module/schema.json'
+[2020-11-25T16:13:49Z] DEBUG    - overrides.json not found. Not writing to package.
+[2020-11-25T16:13:49Z] DEBUG    - Packaging complete, uploading...
+[2020-11-25T16:13:49Z] DEBUG    - Uploading to region 'us-east-1'
+[2020-11-25T16:13:49Z] INFO     - Creating CloudFormationManagedUploadInfrastructure
+[2020-11-25T16:13:49Z] DEBUG    - Waiting for stack 'arn:aws:cloudformation:us-east-1:928154798873:stack/CloudFormationManagedUploadInfrastructure/344e9a60-2f39-11eb-8b31-12189cd24959'
+[2020-11-25T16:14:30Z] DEBUG    - Logging set up successfully
+[2020-11-25T16:14:30Z] DEBUG    - Running submit: Namespace(command=<function submit at 0x7f10a293dbf8>, dry_run=False, endpoint_url=None, region=None, role_arn=None, set_default=False, subparser_name='submit', use_role=True, verbose=0, version=False)
+[2020-11-25T16:14:30Z] DEBUG    - Root directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module
+[2020-11-25T16:14:30Z] DEBUG    - Loading project file '/home/david-mic/Code/github/1davidmichael/example_cfn_module/.rpdk-config'
+[2020-11-25T16:14:30Z] INFO     - Validating your module fragments...
+[2020-11-25T16:14:30Z] DEBUG    - Fragment directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module/fragments
+[2020-11-25T16:14:30Z] DEBUG    - Overwriting '/home/david-mic/Code/github/1davidmichael/example_cfn_module/schema.json'
+[2020-11-25T16:14:30Z] DEBUG    - overrides.json not found. Not writing to package.
+[2020-11-25T16:14:30Z] DEBUG    - Packaging complete, uploading...
+[2020-11-25T16:14:30Z] DEBUG    - Uploading to region 'us-east-1'
+[2020-11-25T16:14:30Z] INFO     - Creating CloudFormationManagedUploadInfrastructure
+[2020-11-25T16:14:30Z] INFO     - CloudFormationManagedUploadInfrastructure already exists. Attempting to update
+[2020-11-25T16:14:30Z] DEBUG    - CloudFormationManagedUploadInfrastructure stack update resulted in unknown ClientError
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 94, in _create_or_update_stack
+    Capabilities=["CAPABILITY_IAM"],
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AlreadyExistsException: An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [CloudFormationManagedUploadInfrastructure] already exists
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 100, in _create_or_update_stack
+    **args, Capabilities=["CAPABILITY_IAM"]
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:us-east-1:928154798873:stack/CloudFormationManagedUploadInfrastructure/344e9a60-2f39-11eb-8b31-12189cd24959 is in CREATE_IN_PROGRESS state and can not be updated.
+[2020-11-25T16:14:30Z] DEBUG    - Caught downstream error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 94, in _create_or_update_stack
+    Capabilities=["CAPABILITY_IAM"],
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AlreadyExistsException: An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [CloudFormationManagedUploadInfrastructure] already exists
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 100, in _create_or_update_stack
+    **args, Capabilities=["CAPABILITY_IAM"]
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:us-east-1:928154798873:stack/CloudFormationManagedUploadInfrastructure/344e9a60-2f39-11eb-8b31-12189cd24959 is in CREATE_IN_PROGRESS state and can not be updated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/cli.py", line 100, in main
+    args.command(args)
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/submit.py", line 21, in submit
+    args.set_default,
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/project.py", line 506, in submit
+    f, endpoint_url, region_name, role_arn, use_role, set_default
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/project.py", line 803, in _upload
+    s3_url = uploader.upload(self.hypenated_name, fileobj)
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 159, in upload
+    stack_id = self._create_or_update_stack(template, INFRA_STACK_NAME)
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 114, in _create_or_update_stack
+    raise DownstreamError("Unknown CloudFormation error") from e
+rpdk.core.exceptions.DownstreamError: Unknown CloudFormation error
+[2020-11-25T16:17:19Z] DEBUG    - Logging set up successfully
+[2020-11-25T16:17:19Z] DEBUG    - Running submit: Namespace(command=<function submit at 0x7fefdf074bf8>, dry_run=False, endpoint_url=None, region=None, role_arn=None, set_default=False, subparser_name='submit', use_role=True, verbose=0, version=False)
+[2020-11-25T16:17:19Z] DEBUG    - Root directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module
+[2020-11-25T16:17:19Z] DEBUG    - Loading project file '/home/david-mic/Code/github/1davidmichael/example_cfn_module/.rpdk-config'
+[2020-11-25T16:17:19Z] INFO     - Validating your module fragments...
+[2020-11-25T16:17:19Z] DEBUG    - Fragment directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module/fragments
+[2020-11-25T16:17:19Z] DEBUG    - Overwriting '/home/david-mic/Code/github/1davidmichael/example_cfn_module/schema.json'
+[2020-11-25T16:17:19Z] DEBUG    - overrides.json not found. Not writing to package.
+[2020-11-25T16:17:19Z] DEBUG    - Packaging complete, uploading...
+[2020-11-25T16:17:19Z] DEBUG    - Uploading to region 'us-east-1'
+[2020-11-25T16:17:20Z] INFO     - Creating CloudFormationManagedUploadInfrastructure
+[2020-11-25T16:17:20Z] DEBUG    - CloudFormationManagedUploadInfrastructure stack create resulted in unknown ClientError
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 94, in _create_or_update_stack
+    Capabilities=["CAPABILITY_IAM"],
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredToken) when calling the CreateStack operation: The security token included in the request is expired
+[2020-11-25T16:17:20Z] DEBUG    - Caught downstream error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 94, in _create_or_update_stack
+    Capabilities=["CAPABILITY_IAM"],
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredToken) when calling the CreateStack operation: The security token included in the request is expired
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/cli.py", line 100, in main
+    args.command(args)
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/submit.py", line 21, in submit
+    args.set_default,
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/project.py", line 506, in submit
+    f, endpoint_url, region_name, role_arn, use_role, set_default
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/project.py", line 803, in _upload
+    s3_url = uploader.upload(self.hypenated_name, fileobj)
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 159, in upload
+    stack_id = self._create_or_update_stack(template, INFRA_STACK_NAME)
+  File "/usr/local/lib/python3.6/dist-packages/rpdk/core/upload.py", line 128, in _create_or_update_stack
+    raise DownstreamError("Unknown CloudFormation error") from e
+rpdk.core.exceptions.DownstreamError: Unknown CloudFormation error
+[2020-11-25T16:17:42Z] DEBUG    - Logging set up successfully
+[2020-11-25T16:17:42Z] DEBUG    - Running submit: Namespace(command=<function submit at 0x7f075e173bf8>, dry_run=False, endpoint_url=None, region=None, role_arn=None, set_default=False, subparser_name='submit', use_role=True, verbose=0, version=False)
+[2020-11-25T16:17:42Z] DEBUG    - Root directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module
+[2020-11-25T16:17:42Z] DEBUG    - Loading project file '/home/david-mic/Code/github/1davidmichael/example_cfn_module/.rpdk-config'
+[2020-11-25T16:17:42Z] INFO     - Validating your module fragments...
+[2020-11-25T16:17:42Z] DEBUG    - Fragment directory: /home/david-mic/Code/github/1davidmichael/example_cfn_module/fragments
+[2020-11-25T16:17:42Z] DEBUG    - Overwriting '/home/david-mic/Code/github/1davidmichael/example_cfn_module/schema.json'
+[2020-11-25T16:17:42Z] DEBUG    - overrides.json not found. Not writing to package.
+[2020-11-25T16:17:42Z] DEBUG    - Packaging complete, uploading...
+[2020-11-25T16:17:42Z] DEBUG    - Uploading to region 'us-east-1'
+[2020-11-25T16:17:42Z] INFO     - Creating CloudFormationManagedUploadInfrastructure
+[2020-11-25T16:17:42Z] INFO     - CloudFormationManagedUploadInfrastructure already exists. Attempting to update
+[2020-11-25T16:17:43Z] INFO     - CloudFormationManagedUploadInfrastructure stack is up to date
+[2020-11-25T16:17:43Z] DEBUG    - Uploading to 'cloudformationmanageduploadinfrast-artifactbucket-1mpbyrpbroe8f/davidmichael-s3-logbucket-module-2020-11-25T16-17-43.zip'...
+[2020-11-25T16:17:43Z] DEBUG    - Upload complete
+[2020-11-25T16:17:43Z] DEBUG    - Got S3 URL: s3://cloudformationmanageduploadinfrast-artifactbucket-1mpbyrpbroe8f/davidmichael-s3-logbucket-module-2020-11-25T16-17-43.zip
+[2020-11-25T16:17:43Z] DEBUG    - Got Log Role: arn:aws:iam::928154798873:role/CloudFormationManagedUplo-LogAndMetricsDeliveryRol-1DYCB9184O75C
+[2020-11-25T16:17:44Z] WARNING  - Successfully submitted type. Waiting for registration with token '0a15d74b-ec5a-411d-b37c-baa635938820' to complete.
+[2020-11-25T16:18:14Z] WARNING  - Registration complete.
+[2020-11-25T16:18:14Z] WARNING  - {'ProgressStatus': 'COMPLETE', 'Description': 'Deployment is currently in DEPLOY_STAGE of status COMPLETED; ', 'TypeArn': 'arn:aws:cloudformation:us-east-1:928154798873:type/module/DavidMichael-S3-LogBucket-MODULE', 'TypeVersionArn': 'arn:aws:cloudformation:us-east-1:928154798873:type/module/DavidMichael-S3-LogBucket-MODULE/00000001', 'ResponseMetadata': {'RequestId': '2d874004-3cdd-44ed-a586-f65d80a164b9', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '2d874004-3cdd-44ed-a586-f65d80a164b9', 'content-type': 'text/xml', 'content-length': '699', 'date': 'Wed, 25 Nov 2020 16:18:14 GMT'}, 'RetryAttempts': 0}}
+[2020-11-25T16:18:14Z] DEBUG    - Finished submit
