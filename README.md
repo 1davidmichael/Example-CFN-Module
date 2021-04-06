@@ -10,7 +10,7 @@ Once cloned this can be deployed to an account using the `cfn` cli tool
 git clone https://github.com/1davidmichael/Example-CFN-Module.git
 cd Example-CFN-Module
 
-cdk submit
+cfn submit
 ```
 
 ## Usage
